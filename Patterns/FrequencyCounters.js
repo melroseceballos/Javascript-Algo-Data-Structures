@@ -44,6 +44,10 @@ function same(arr1, arr2){
         // if it returns true, then it checks how many times those numbers are in the array2
         // if is the same number of times in array1 then it returns true
         // if not the same it returns false
+        // its better to return false instead of true because it if the first letter is the same and it returns true
+        // it doesn't check if the rest of the letters are true or not
+        // but if we return false ... it checks all the letter until there is a letter that is false
+        // then it returns false
         if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]){
             return false
         }
