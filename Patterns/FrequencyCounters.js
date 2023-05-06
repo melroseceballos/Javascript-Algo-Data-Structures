@@ -52,6 +52,7 @@ function same(arr1, arr2){
             return false
         }
     }
+    // this returns true if everything is looking good
     return true
 }
 
@@ -90,3 +91,38 @@ function same(arr1, arr2){
 }
 
 same([1,2,3,2], [9,1,4,4])
+
+
+
+/*** MY CODE FOR CHECKING ANAGRAMS */
+// I have two words
+function validAnagram(str1, str2){
+    //I have make sure that the letters in those words are the same and that they occur in the same times
+   if(str1.length !== str2.length){
+       return false
+   }
+    // in order for me to get a result in object
+    // I have to introduce object variables
+     // cinema - iceman 
+     // from the examples it looks to me like it is an object rather than an array 
+    
+    let obj1 = {}
+    let obj2 = {}
+    
+     // im looking through the first word if the letters are in the second word == so I'm comparing them
+   for (let i=0; i<str1.length; i++){
+   let value = str1[i]
+   obj1[value] = (obj1[value] || 0) + 1
+    // c:1 i:1 n:1 e:1 m:1 a:1
+   }
+   for (let j=0; j<str2.length; j++){
+   let value2 = str2[j]
+   obj2[value2] = (obj2[value2] || 0) + 1
+   }
+   
+   for(let key in obj1){
+   if (!(key in obj2 && obj2[key] === obj1[key]))
+   return false
+           } 
+   return true
+   }
