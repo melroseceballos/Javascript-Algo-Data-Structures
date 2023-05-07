@@ -12,3 +12,21 @@
  * NOTE: THEY HAVE TO BE IN ORDER -- YOU CAN'T SKIP A NUMBER or start from different side.. those are pointers.. 
  * you have to start from beginning to end
  */
+
+// BEST CASE SOLUTION:
+function maxSubarraySum(arr, num){
+    let maxSum = 0;
+    let tempSum = 0;
+    if (arr.length < num) return null;
+    for (let i = 0; i < num; i++) {
+      maxSum += arr[i];
+    }
+    tempSum = maxSum;
+    for (let i = num; i < arr.length; i++) {
+      tempSum = tempSum - arr[i - num] + arr[i];
+      maxSum = Math.max(maxSum, tempSum);
+    }
+    return maxSum;
+  }
+  
+  maxSubarraySum([2,6,9,2,1,8,5,6,3],3)
