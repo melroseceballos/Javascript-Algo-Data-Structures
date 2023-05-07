@@ -13,19 +13,34 @@
  * you have to start from beginning to end
  */
 
-// BEST CASE SOLUTION:
+// BEST CASE SOLUTION: Time Complexity: O(n) Linear
 function maxSubarraySum(arr, num){
+    // this variable holds the maximum sum of the number given
     let maxSum = 0;
+    // this variable holds the temporary sum of the current subset
     let tempSum = 0;
+    // checks if the array given is large enough to get a value
+    // for example if array is only ([1,2], 3) <--- but the number is 3
+    // the array is not big enough to give back a value which will return null according to this line of code
     if (arr.length < num) return null;
+    // this for loops basically starts from the beginning of the array
+    // and checks for what number we are given to create the sliding window
     for (let i = 0; i < num; i++) {
+        // the sum is then stored in here
       maxSum += arr[i];
     }
+    // which is now then transferred to tempsum
     tempSum = maxSum;
+    // and then this line of code basically iterates through the subset window
+    // and then whenever it moves -- it adds the number to its right and substracts the number from the left
+    // allowing a more efficient way to navigate through the array instead of looping through it again
     for (let i = num; i < arr.length; i++) {
       tempSum = tempSum - arr[i - num] + arr[i];
+      // this just checks which is bigger -- the current tempsum or the current max sum ... and then whichever one is the biggest
+      // will be stored in the maxsum variable
       maxSum = Math.max(maxSum, tempSum);
     }
+    // the maxsum variable is then returned
     return maxSum;
   }
   
