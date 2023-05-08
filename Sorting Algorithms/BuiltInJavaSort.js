@@ -2,6 +2,8 @@
 - sorts array numerically
 **/
 
+// More java sort methods on: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
 function javaSort (num1, num2){
     // num1-num2 this sorts array from smallest to biggest
 
