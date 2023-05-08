@@ -1,3 +1,6 @@
+// BIG O = Time Complexity O(n)
+            // Space Complexity: O(1)
+
 function insertionSort(arr)    {
     // iterates over the array
     for(let i=1; i<arr.length; i++){
