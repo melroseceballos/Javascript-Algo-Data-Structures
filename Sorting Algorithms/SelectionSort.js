@@ -1,3 +1,7 @@
+// BIG O = Time Complexity O(n^2)
+            // Space Complexity: O(1)
+
+
 // LEGACY VERSION (non ES2015 syntax)
 function sselectionSort(arr){
     for(var i = 0; i < arr.length; i++){
