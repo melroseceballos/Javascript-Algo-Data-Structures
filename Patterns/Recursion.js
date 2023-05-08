@@ -38,5 +38,28 @@ function sumRange(num){
  sumRange(4)
  
                    
-                                    
+// example 3:
+function collectOddValues(arr){
+    // It first initializes an empty array called result, where it will store the odd numbers.
+    let result = [];
+    // It then defines another function called helper, which takes an array as its input and checks if the first element of the array is odd or even.
+    function helper(helperInput){
+        // Finally, the helper function is called with the input array arr, and the result array is returned as the final output.
+        if(helperInput.length === 0) {
+            return;
+        }
+        // If the first element is odd, it adds it to the result array using the push method.
+        if(helperInput[0] % 2 !== 0){
+            result.push(helperInput[0])
+        }
+        // It then calls itself recursively, passing the remaining elements of the input array as a new array argument using the slice method, which creates a new array with all elements except the first one.
+        helper(helperInput.slice(1))
+    }
+    
+    helper(arr)
+
+    return result;
+}
+
+collectOddValues([1,2,3,4,5,6,7,8,9])                                 
                                  
