@@ -6,7 +6,7 @@
  * if false, return -1
  */
 
-//MY ANSWER:
+//MY ANSWER: BIG O: O(n)
 function linearSearch(arr, val)	{
     for(let i=0; i<arr.length; i++){
     let arrV= arr[i]
