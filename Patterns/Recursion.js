@@ -61,5 +61,8 @@ function collectOddValues(arr){
     return result;
 }
 
+// So in this specific case, the function collectOddValues is called with the input array [1,2,3,4,5,6,7,8,9]. 
+// The function internally calls the helper function with the same array, and it recursively filters out the even numbers until it reaches the end of the array. 
+// Then it returns the result array, which contains only the odd numbers, [1, 3, 5, 7, 9].
 collectOddValues([1,2,3,4,5,6,7,8,9])                                 
                                  
