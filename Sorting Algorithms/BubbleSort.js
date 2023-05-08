@@ -1,5 +1,6 @@
 // Optimized BubbleSort with noSwaps
-function bubbleSort(arr){
+// BIG O: Time Complexity: O(N)  Space Complexity: O(1)
+ function bubbleSort(arr){
     var noSwaps;
     for(var i = arr.length; i > 0; i--){
       noSwaps = true;
