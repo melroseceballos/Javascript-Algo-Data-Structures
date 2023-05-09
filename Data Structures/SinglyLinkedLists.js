@@ -119,3 +119,5 @@ set(index, val){
     }
     return false;
 }
+
+// INSERT
