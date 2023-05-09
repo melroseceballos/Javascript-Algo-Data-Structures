@@ -1,4 +1,6 @@
 // Merge function from merging arrays
+// BIG O: Time Complexity: O(n log n)
+        //Space Complexity: O(n)
 function merge(arr1, arr2){
     let results = [];
     let i = 0;
