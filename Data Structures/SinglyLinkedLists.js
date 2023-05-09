@@ -52,3 +52,33 @@ push(val){
     // this returns the whole list
     return this;
 }
+
+// adding the pop method here:
+pop(){
+    if(!this.head) return undefined;
+    var current = this.head;
+    var newTail = current;
+    while(current.next){
+        newTail = current;
+        current = current.next;
+    }
+    this.tail = newTail;
+    this.tail.next = null;
+    this.length--;
+    if(this.length === 0){
+        this.head = null;
+        this.tail = null;
+    }
+    return current;
+
+}
+
+// SHIFTING
+shift() {
+ if(this.length === 0){
+    let currentHead = this.head
+    this.head = this.head.next
+    this.length--;
+    return currentHead
+ }
+  }
