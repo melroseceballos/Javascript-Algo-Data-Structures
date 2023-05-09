@@ -75,10 +75,14 @@ pop(){
 
 // SHIFTING
 shift() {
- if(this.length === 0){
+ if(this.length === 0){ 
+    return undefined
+ }
     let currentHead = this.head
-    this.head = this.head.next
+    this.head = currentHead.next
     this.length--;
     return currentHead
- }
   }
+
+  // UNSHIFT
+  
