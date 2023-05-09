@@ -1,3 +1,8 @@
+// BIG O: Time Complexity: O(nk)
+    //    Space Complexity: O(n + k)
+
+
+
 // this function get the rightmost number of the value
 // this is so that it can start sorting from here
   function getDigit(num, i) {
