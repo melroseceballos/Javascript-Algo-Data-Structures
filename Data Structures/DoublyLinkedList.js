@@ -25,19 +25,38 @@ class DoublyLinkedList {
         }
         this.length++;
         return this;
-    }
+    } 
     pop(){
-        if(this.length === 0) return undefined
-            let current= this.tail
-            if (this.length === 1){
+        if(!this.head) return undefined;
+        var poppedNode = this.tail;
+        if(this.length === 1){
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.tail = poppedNode.prev;
+            this.tail.next = null;
+            poppedNode.prev = null;
+        }
+        this.length--;
+        return poppedNode;
+    }
+    shift(){
+        if(this.length === 0) return undefined;
+        var oldHead = this.head;
+        if(this.length === 1){
             this.head = null;
             this.tail = null;
         }else{
-            this.tail = current.prev  
-            this.tail.next = null;
-            this.length--
-            return current
+            this.head = oldHead.next;
+            this.head.prev = null;
+            oldHead.next = null;
         }
+        this.length--;
+        return oldHead;
     }
 }
-       
+
+var list = new DoublyLinkedList()
+list.push("Harry")
+list.push("Ron")
+list.push("Hermione")
