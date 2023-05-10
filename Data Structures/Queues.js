@@ -1,3 +1,5 @@
+// BIG O:
+
 class Node {
     constructor(value){
         this.value = value;
@@ -12,7 +14,7 @@ class Queue {
         this.size = 0;
     }
 
-    // enqueue
+    // enqueue  O(1)
     enqueue(val){
         var newNode = new Node(val);
         if(!this.first){
@@ -25,7 +27,7 @@ class Queue {
         return ++this.size;
     }
 
-    // dequeue
+    // dequeue  O(1)
     dequeue(){
         if(!this.first) return null;
 
