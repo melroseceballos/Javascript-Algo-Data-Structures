@@ -10,7 +10,7 @@ class MaxBinaryHeap {
     }
     // this is where the node gets compared
     // and then bubbles up if the value suggests
-    bubbleUp(){
+    bubbleUp(){ //O(log n)
         let idx = this.values.length - 1;
         const element = this.values[idx];
         while(idx > 0){
@@ -24,7 +24,7 @@ class MaxBinaryHeap {
     }
     // removing root and sinking down
     // until new root is established
-    sinkDown(){
+    sinkDown(){ //O(log n)
         let idx = 0;
         const length = this.values.length;
         const element = this.values[0];
