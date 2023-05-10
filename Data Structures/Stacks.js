@@ -1,3 +1,11 @@
+// in linkedlist.. stacks use the push/pop methods
+/** BIG O:
+	insertion O(1)
+	removal O(1)
+	Search O(n)
+	Access O(n)
+    **/
+
 class Node {
     constructor(value){
         this.value = value;
