@@ -80,6 +80,41 @@ class BinarySearchTree {
         }
         return data;
     }
+    /********************* DFS */
+    // PRE - ORDER
+    DFSPreOrder(){
+        var data = [];
+        function traverse(node){
+            data.push(node.value);
+            if(node.left) traverse(node.left);
+            if(node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return data;
+    }
+
+    // POST ORDER
+    DFSPostOrder(){
+        var data = [];
+        function traverse(node){
+            if(node.left) traverse(node.left);
+            if(node.right) traverse(node.right);
+            data.push(node.value);
+        }
+        traverse(this.root);
+        return data;
+    }
+    // IN ORDER
+    DFSInOrder(){
+        var data = [];
+        function traverse(node){
+            if(node.left) traverse(node.left);
+            data.push(node.value);
+            if(node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return data;
+    }
 }
 
 
