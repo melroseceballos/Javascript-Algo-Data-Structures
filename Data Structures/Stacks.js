@@ -1,20 +1,38 @@
-// LIFO IN LINKEDLIST IS PUSH/POP when using stacks
-
-// push
-/***** DO LINKEDLIST SKELETON HERE
- * WHICH INCLUDES CREATING A NODE CLASS
- * AND A SINGLYLINKEDLIST CLASS
- */
-push(val)   {
-    let newNode = new Node(val)
-    if(this.length === 0){
-        this.first = newNode
-        this.last = newNode
-    }else(this.length === 1){
-        let firstProp = this.first
-         this.first = newNode
-        this.first.next = firstProp
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null;
     }
-    return ++this.size
+}
 
+class Stack {
+    constructor(){
+        this.first = null;
+        this.last = null;
+        this.size = 0;
+    }
+    //push
+    push(val){
+        var newNode = new Node(val);
+        if(!this.first){
+            this.first = newNode;
+            this.last = newNode;
+        } else {
+            var temp = this.first;
+            this.first = newNode;
+            this.first.next = temp;
+        }
+        return ++this.size;
+    }
+    // pop
+    pop(){
+        if(!this.first) return null;
+        var temp = this.first;
+        if(this.first === this.last){
+            this.last = null;
+        }
+        this.first = this.first.next;
+        this.size--;
+        return temp.value;
+    }
 }
