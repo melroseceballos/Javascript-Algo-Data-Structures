@@ -13,6 +13,8 @@ class DoublyLinkedList {
         this.tail = null;
         this.length = 0;
     }
+
+    // PUSH
     push(val){
         var newNode = new Node(val);
         if(this.length === 0){
@@ -26,6 +28,7 @@ class DoublyLinkedList {
         this.length++;
         return this;
     } 
+    // POP
     pop(){
         if(!this.head) return undefined;
         var poppedNode = this.tail;
@@ -40,6 +43,7 @@ class DoublyLinkedList {
         this.length--;
         return poppedNode;
     }
+    // SHIFT
     shift(){
         if(this.length === 0) return undefined;
         var oldHead = this.head;
@@ -53,6 +57,20 @@ class DoublyLinkedList {
         }
         this.length--;
         return oldHead;
+    }
+    // UNSHIFT
+    unshift(val){
+        var newNode = new Node(val);
+        if(this.length === 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.head.prev = newNode;
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+        return this;
     }
     // GET
     get(index){
@@ -75,7 +93,30 @@ class DoublyLinkedList {
         }
         return current;
     }
+    // SET
+    set(index, val){
+        var foundNode = this.get(index);
+        if(foundNode != null){
+            foundNode.val = val;
+            return true;
+        }
+        return false;
+    }
+    // INSERT
+    insert(index, val){
+        if(index < 0 || index > this.length) return false;
+        if(index === 0) return !!this.unshift(val);
+        if(index === this.length) return !!this.push(val);
 
+        var newNode = new Node(val);
+        var beforeNode = this.get(index-1);
+        var afterNode = beforeNode.next;
+        
+        beforeNode.next = newNode, newNode.prev = beforeNode;
+        newNode.next = afterNode, afterNode.prev = newNode;
+        this.length++;
+        return true;
+    }
 }
 
 var list = new DoublyLinkedList()
