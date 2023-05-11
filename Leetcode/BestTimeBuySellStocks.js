@@ -46,3 +46,16 @@ function prices(arr) {
   
   console.log(prices([7, 1, 5, 3, 6, 4]));
   
+  // recreate
+  function prices (arr){
+    if(arr === 0) return null
+    let buy = arr[0]
+    let maxProfit = 0
+    for (let i=1; i<arr.length; i++){
+        tempProfit = arr[i] - buy
+        buy = Math.min(arr[i], buy)
+        maxProfit = Math.max(tempProfit, maxProfit)
+    }
+    return maxProfit
+  }
+  console.log(prices([7, 1, 5, 3, 6, 4]));
