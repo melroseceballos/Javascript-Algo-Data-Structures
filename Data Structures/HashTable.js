@@ -120,8 +120,11 @@ values(){
     if(this.keyMap[i]){
       // if there is loop over the key maps 
       for(let j = 0; j < this.keyMap[i].length; j++){
-        // if there is values within the keys
+        // checks if there are already values in the index
+        // it makes sure we don't have duplicate values
+        // if there's a duplicate it doesn't push the duplicate value
         if(!valuesArr.includes(this.keyMap[i][j][1])){
+          // if there's no duplicate
           // we will then push those values in side the array we created at the top
           valuesArr.push(this.keyMap[i][j][1])
         }
