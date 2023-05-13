@@ -29,17 +29,22 @@ class HashTable {
     if(!this.keyMap[index]){
       this.keyMap[index] = [];
     }
+    // pushing the subarray into the index
     this.keyMap[index].push([key, value]);
   }
   get(key){
     let index = this._hash(key);
+    // checks if the key that I'm looking for is in an index
     if(this.keyMap[index]){
+      // loops through that index
       for(let i = 0; i < this.keyMap[index].length; i++){
+        // if the key and value is in there, it return the key-value pairs
         if(this.keyMap[index][i][0] === key) {
           return this.keyMap[index][i][1]
         }
       }
     }
+    // otherwise, it will return undefined
     return undefined;
   }
 }
