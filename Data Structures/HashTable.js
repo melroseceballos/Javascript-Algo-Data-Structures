@@ -21,6 +21,7 @@ class HashTable {
     return total;
   }
   // accepts a key and a value
+  // BIG O: O(1)
   set(key,value){
     // hashes the key
     let index = this._hash(key);
@@ -34,6 +35,7 @@ class HashTable {
     // pushing the subarray into the index
     this.keyMap[index].push([key, value]);
   }
+  // BIG O: O(1)
   get(key){
     // takes whatever key you are looking for
     let index = this._hash(key);
@@ -98,6 +100,7 @@ function hash (key,arr){
 
 // KEY
 // operate exactly the same way as values
+// BIG O: O(1)
 keys(){
   let keysArr = [];
   for(let i = 0; i < this.keyMap.length; i++){
@@ -111,7 +114,7 @@ keys(){
   }
   return keysArr;
 }
-
+// BIG O: O(1)
 values(){
   // making an array to store values of data
   let valuesArr = [];
