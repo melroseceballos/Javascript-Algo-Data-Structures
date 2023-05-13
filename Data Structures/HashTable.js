@@ -35,6 +35,7 @@ class HashTable {
     this.keyMap[index].push([key, value]);
   }
   get(key){
+    // takes whatever key you are looking for
     let index = this._hash(key);
     // checks if the key that I'm looking for is in an index
     if(this.keyMap[index]){
@@ -93,3 +94,6 @@ function hash (key,arr){
   }
   return total;
 }
+
+
+// KEY
