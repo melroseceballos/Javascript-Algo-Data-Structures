@@ -26,7 +26,9 @@ class HashTable {
     let index = this._hash(key);
     // creates subarrays in order to store multiple key-value pairs in one index
     // it's using separate chaining
+    // checks if the is a value in the index
     if(!this.keyMap[index]){
+      // if not it creates a new subarray
       this.keyMap[index] = [];
     }
     // pushing the subarray into the index
