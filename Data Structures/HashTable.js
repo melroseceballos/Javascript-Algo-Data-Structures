@@ -48,3 +48,12 @@ ht.set("plum","#DDA0DD")
 
 // in order to access values by keys
 // hashing functions convert keys into valid array indices
+
+//this function will only hash string
+// .charCodeAt() gives the corresponding of a letter
+// make sure to subtract it by -96
+// EX:
+
+// "a".charCodeAt(0) output: 1
+// b.charCodeAt(0) output: 2
+// z.charCodeAt(0) output: 26
