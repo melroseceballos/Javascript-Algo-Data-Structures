@@ -97,6 +97,7 @@ function hash (key,arr){
 
 
 // KEY
+// operate exactly the same way as values
 keys(){
   let keysArr = [];
   for(let i = 0; i < this.keyMap.length; i++){
