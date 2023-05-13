@@ -20,8 +20,12 @@ class HashTable {
     }
     return total;
   }
+  // accepts a key and a value
   set(key,value){
+    // hashes the key
     let index = this._hash(key);
+    // creates subarrays in order to store multiple key-value pairs in one index
+    // it's using separate chaining
     if(!this.keyMap[index]){
       this.keyMap[index] = [];
     }
