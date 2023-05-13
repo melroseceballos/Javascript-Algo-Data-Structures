@@ -112,15 +112,22 @@ keys(){
 }
 
 values(){
+  // making an array to store values of data
   let valuesArr = [];
+  // looping over key map
   for(let i = 0; i < this.keyMap.length; i++){
+    // checks if there are keys inside the map
     if(this.keyMap[i]){
+      // if there is loop over the key maps 
       for(let j = 0; j < this.keyMap[i].length; j++){
+        // if there is values within the keys
         if(!valuesArr.includes(this.keyMap[i][j][1])){
+          // we will then push those values in side the array we created at the top
           valuesArr.push(this.keyMap[i][j][1])
         }
       }
     }
   }
+  // and it will return the values
   return valuesArr;
 }
