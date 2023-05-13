@@ -1,4 +1,6 @@
 // basic hash class set up
+// in order to access values by keys
+// hashing functions convert keys into valid array indices
 
 class HashTable {
   constructor(size=53){
@@ -46,14 +48,22 @@ ht.set("plum","#DDA0DD")
 
 
 
-// in order to access values by keys
-// hashing functions convert keys into valid array indices
 
 //this function will only hash string
 // .charCodeAt() gives the corresponding of a letter
 // make sure to subtract it by -96
 // EX:
-
 // "a".charCodeAt(0) output: 1
 // b.charCodeAt(0) output: 2
 // z.charCodeAt(0) output: 26
+
+//basic function in hashing strings
+function hash(key, arr){
+  let total = 0;
+  for(let char of key){
+    // this is mapping or looping through the keys to get the numerical value of the characters/letters
+    let value = char.charCodeAt(0) - 96
+    total = (total + value) % arr
+  }
+  return total
+}
