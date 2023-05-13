@@ -3,10 +3,13 @@
 // hashing functions convert keys into valid array indices
 
 class HashTable {
+  // how big the hash table to be: Note that it's a prime number
   constructor(size=53){
+    // making a new array to store keys
     this.keyMap = new Array(size);
   }
 
+  // this is the optimized hash function. same thing coded below
   _hash(key) {
     let total = 0;
     let WEIRD_PRIME = 31;
