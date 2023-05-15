@@ -17,10 +17,14 @@ class Graph {
           this.adjacencyList[v2].push(v1)
     }
     // removing an edge
+        // create removeEdge method that accepts specific vertex
+        // you want to remove
        removeEdge(vertex1,vertex2){
+        // reassining vertex 1 without the value of vertex2
         this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(
             v => v !== vertex2
         );
+        // reassigning vertex2 without the value of vertex 1
         this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter(
             v => v !== vertex1
         );
