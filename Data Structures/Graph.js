@@ -30,11 +30,18 @@ class Graph {
         );
     }
   // removing a vertex
+  // creating removeVertex method with vertex parameter that 
+  // you're trying to remove
   removeVertex(vertex){
+    // looping over the adjancency list that contains the vertex
+    // you're trying to remove
     while(this.adjacencyList[vertex].length){
+        // poppping or taking out the vertex
         const adjacentVertex = this.adjacencyList[vertex].pop();
+        // removes the vertex from other adjancency lists
         this.removeEdge(vertex, adjacentVertex);
     }
+    // deletes the key of the vertex
     delete this.adjacencyList[vertex]
 }
 }
