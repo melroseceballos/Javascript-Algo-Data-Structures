@@ -16,5 +16,14 @@ class Graph {
           // vise versa
           this.adjacencyList[v2].push(v1)
     }
+    // removing an edge
+       removeEdge(vertex1,vertex2){
+        this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(
+            v => v !== vertex2
+        );
+        this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter(
+            v => v !== vertex1
+        );
+    }
   
 }
