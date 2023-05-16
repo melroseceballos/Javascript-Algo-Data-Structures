@@ -13,6 +13,7 @@ depthFirstRecursive(start) {
     const result = [];
     //stores all the visited vertices
     const visited = {};
+    // looks through the adjancency list
     const adjacencyList = this.adjacencyList;
 (function dfs(vertex){
     // checks if there's even a vertex
@@ -21,12 +22,17 @@ depthFirstRecursive(start) {
             // if the vertex 
             visited[vertex] = true;
             result.push(vertex);
+            // goes through the array or loops through the array
+            // of the adjancency list of selected vertex
             adjacencyList[vertex].forEach(neighbor => {
+                // checks if the neighbor of the vertex has been visited
                 if(!visited[neighbor]){
+                    // if it's not visited it calls the function
+                    // recursively until everything is visited
                     return dfs(neighbor)
                 }
             });
         })(start);
-
+        // returns the result
         return result;
 }
