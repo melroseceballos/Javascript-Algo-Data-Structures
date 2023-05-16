@@ -28,7 +28,7 @@ depthFirstRecursive(start) {
                 // checks if the neighbor of the vertex has been visited
                 if(!visited[neighbor]){
                     // if it's not visited it calls the function
-                    // recursively until everything is visited
+                    // recursively until every node is visited
                     return dfs(neighbor)
                 }
             });
