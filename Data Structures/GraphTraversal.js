@@ -26,6 +26,8 @@ depthFirstRecursive(start) {
             // of the adjancency list of selected vertex
             adjacencyList[vertex].forEach(neighbor => {
                 // checks if the neighbor of the vertex has been visited
+                // if visited it ignores it and goes to the array vertex
+                // that has not been visited
                 if(!visited[neighbor]){
                     // if it's not visited it calls the function
                     // recursively until every node is visited
