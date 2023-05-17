@@ -58,6 +58,7 @@ depthFirstRecursive(start) {
         depthFirstIterative(start){
             //create variable to store starting vertex
             const stack = [start];
+            // create a variable to store result 
             const result = [];
             const visited = {};
             let currentVertex;
