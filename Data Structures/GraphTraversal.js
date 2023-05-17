@@ -56,6 +56,7 @@ depthFirstRecursive(start) {
 		- Push all of its neighbors into the stack
         **/
         depthFirstIterative(start){
+            //create variable to store starting vertex
             const stack = [start];
             const result = [];
             const visited = {};
