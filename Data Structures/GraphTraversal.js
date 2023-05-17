@@ -42,3 +42,16 @@ depthFirstRecursive(start) {
 
 
 // DFS ITERATIVE SOLUTION
+/* PSEUDOCODE
+- create a function that accepts a starting node
+- Create a stack to help use keep track of vertices (use a list/array)
+- Create a list to store the end result, to be returned at the very end
+- Create an objectt to store visited vertices
+- Add the starting vertex to the stacl, and mark it visited
+- While the stach has something in it:
+	- Pop the next vertex from the stack
+	- If that vertex hasn't been visited yet
+		-  Mark it as visited 
+		- Add it to the result list
+		- Push all of its neighbors into the stack
+        **/
