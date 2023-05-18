@@ -62,6 +62,7 @@ depthFirstRecursive(start) {
             const result = [];
             // create a variable to store visited vertices
             const visited = {};
+            // this variable will be updated everytime on current vertex
             let currentVertex;
     
             visited[start] = true;
@@ -83,19 +84,28 @@ depthFirstRecursive(start) {
         // uses push and shift instead of push and pop
         breadthFirst(start){
             const queue = [start];
+            // hold the search results
             const result = [];
+            // this will hold all the vertices that has been visited
             const visited = {};
+            // checks if the current vertex in the iteration has been seen/visited
             let currentVertex;
             visited[start] = true;
-    
+
+           
             while(queue.length){
+                // start from the specific vertex
                 currentVertex = queue.shift();
+                // visit that node
                 result.push(currentVertex);
                
-    
+               
                 this.adjacencyList[currentVertex].forEach(neighbor => {
+                  
                     if(!visited[neighbor]){
+                       
                         visited[neighbor] = true;
+                       
                         queue.push(neighbor);
                     }
                 });
