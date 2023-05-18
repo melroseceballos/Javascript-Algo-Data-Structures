@@ -99,16 +99,17 @@ depthFirstRecursive(start) {
                 // visit that node
                 result.push(currentVertex);
                
-               
+                // check alls the neighbors of the current vertex
                 this.adjacencyList[currentVertex].forEach(neighbor => {
-                  
+                    // checks if the neighbor of current vertex has been visited
                     if(!visited[neighbor]){
-                       
+                        // if neighbor has been visited
                         visited[neighbor] = true;
-                       
+                            // it is pushed to the queue
                         queue.push(neighbor);
                     }
                 });
             }
+            // otherwise it returns the result
             return result;
         }
