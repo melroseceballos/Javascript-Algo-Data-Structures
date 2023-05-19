@@ -113,3 +113,7 @@ depthFirstRecursive(start) {
             // otherwise it returns the result
             return result;
         }
+        
+        
+        
+        // TEMPORARILY ADDING DIJKSTRA's ALGORITHM HERE
