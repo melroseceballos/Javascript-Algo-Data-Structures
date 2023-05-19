@@ -116,9 +116,4 @@ depthFirstRecursive(start) {
         
         
         
-        // TEMPORARILY ADDING DIJKSTRA's ALGORITHM HERE
-/** 
-* one of the most famous and widely used algo
-* finds shortest path between vertices
-*
-*/
+        
