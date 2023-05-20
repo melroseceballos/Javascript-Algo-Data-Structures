@@ -23,5 +23,8 @@ class WeightedGraph {
 * create a function that takes the starting vertex
 * create a variable to store visited vertex
 * begin to store the visited vertex in visited variable
-*
+* create another variable that temporarily hold the sum of edges
+* create a loop that visits neighbor vertices
+* make sure to take the vertex with least amount of weight/distance
+
 */
