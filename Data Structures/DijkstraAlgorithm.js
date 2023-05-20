@@ -19,12 +19,15 @@ class WeightedGraph {
     }
 }
 
+// this is what sorts to find the lowest
 class PriorityQueue {
   constructor(){
     this.values = [];
   }
+  // everytine a new value is added
   enqueue(val, priority) {
     this.values.push({val, priority});
+    // it sorts through it
     this.sort();
   };
   dequeue() {
