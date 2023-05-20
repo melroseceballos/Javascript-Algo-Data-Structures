@@ -20,6 +20,8 @@ class WeightedGraph {
 }
 
 /** PSEUDOCODE for Dijkstra's Algo
-*
+* create a function that takes the starting vertex
+* create a variable to store visited vertex
+* begin to store the visited vertex in visited variable
 *
 */
