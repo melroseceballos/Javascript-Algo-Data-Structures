@@ -4,5 +4,6 @@
 **/
 
 /** Optimal Substructure 
-*
+* When an optimal solution is found
+* from the optimal solution from its subproblems
 **/
