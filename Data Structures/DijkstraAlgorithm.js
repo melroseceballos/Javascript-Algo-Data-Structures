@@ -19,6 +19,22 @@ class WeightedGraph {
     }
 }
 
+class PriorityQueue {
+  constructor(){
+    this.values = [];
+  }
+  enqueue(val, priority) {
+    this.values.push({val, priority});
+    this.sort();
+  };
+  dequeue() {
+    return this.values.shift();
+  };
+  sort() {
+    this.values.sort((a, b) => a.priority - b.priority);
+  };
+}
+
 /** PSEUDOCODE for Dijkstra's Algo
 * create a function that takes the starting vertex
 * create a variable to store visited vertex
@@ -29,3 +45,5 @@ class WeightedGraph {
 * add sum of distance and store in temp variable
 *
 */
+
+
